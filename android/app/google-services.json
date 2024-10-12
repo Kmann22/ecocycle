@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "11127271775",
+    "project_id": "ecocycle-247aa",
+    "storage_bucket": "ecocycle-247aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11127271775:android:367526cfcde14824e306ea",
+        "android_client_info": {
+          "package_name": "com.example.ecocycle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6BZLGFXD2hsiKcjJ3DIfmD8LXi-H-sTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
