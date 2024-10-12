@@ -1,3 +1,5 @@
+import 'package:ecocylce/pages/challenges.dart';
+import 'package:ecocylce/pages/login.dart';
 import 'package:ecocylce/pages/userrecycle.dart';
 import 'package:flutter/material.dart';
 import 'package:stellar_flutter_sdk/stellar_flutter_sdk.dart';
@@ -111,8 +113,13 @@ class _HomePageState extends State<HomePage> {
   Future<void> _logout() async {
     await _auth.signOut(); // Sign out from Firebase
     // Navigate back to login page or initial page (implement this part as per your app structure)
-    Navigator.pushReplacementNamed(
-        context, '/login'); // Assuming you have a named route for login
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(
+          builder: (context) =>
+              LoginPage()), // Replace with your LoginPage widget
+      (Route<dynamic> route) => false, // Clear the navigation stack
+    );
   }
 
   @override
@@ -161,7 +168,6 @@ class _HomePageState extends State<HomePage> {
                       builder: (context) =>
                           RewardsPage()), // Ensure RewardsPage is imported
                 );
-                // Navigate to Admin-User Rewards page (implement this page)
               },
               child: Text('Admin - Manage User Rewards'),
             ),
@@ -179,7 +185,12 @@ class _HomePageState extends State<HomePage> {
             // Challenges Page Link
             ElevatedButton(
               onPressed: () {
-                // Navigate to Challenges Page (implement this page)
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          ChallengesPage()), // Ensure ChallengesPage is imported
+                );
               },
               child: Text('Participate in Recycling Challenges'),
             ),
