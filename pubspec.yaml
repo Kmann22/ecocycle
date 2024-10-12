@@ -39,6 +39,8 @@ dependencies:
   firebase_auth: ^5.3.1
   cloud_firestore: ^5.4.4
   stellar_flutter_sdk: ^1.8.8
+  qr_flutter: ^4.1.0
+  qr_code_scanner: ^0.4.0
 
 dev_dependencies:
   flutter_test:

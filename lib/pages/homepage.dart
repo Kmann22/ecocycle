@@ -1,3 +1,4 @@
+import 'package:ecocylce/pages/userrecycle.dart';
 import 'package:flutter/material.dart';
 import 'package:stellar_flutter_sdk/stellar_flutter_sdk.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -144,16 +145,22 @@ class _HomePageState extends State<HomePage> {
 
             // Navigation to Recycling Centers
             ElevatedButton(
-              onPressed: () {
-                // Navigate to Recycling Centers page (implement this page)
-              },
+              onPressed: () {},
               child: Text('Find Nearby Recycling Centers'),
             ),
+
             SizedBox(height: 20),
 
             // Admin-User Rewards Button
             ElevatedButton(
               onPressed: () {
+                // Navigate to Rewards Page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          RewardsPage()), // Ensure RewardsPage is imported
+                );
                 // Navigate to Admin-User Rewards page (implement this page)
               },
               child: Text('Admin - Manage User Rewards'),
